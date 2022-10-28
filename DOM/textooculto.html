@@ -1,0 +1,32 @@
+<html>
+<h1>Ocultar y mostrar elementos</h1>
+<button type="button" onclick="mostrarPremio();">mostrar</button>
+<button type="button" onclick="ocultarPremio();">Ocultar</button>
+<style type="text/css">
+    #mensaje {
+        display: none;
+    }
+</style>
+
+<div id="mensaje">
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur autem suscipit ab iusto nulla rerum
+        architecto, iure voluptas exercitationem libero cum cupiditate, consequatur excepturi? Corrupti excepturi ut
+        exercitationem quibusdam eligendi!
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio eligendi iusto temporibus est iure qui
+        dolores quisquam, quaerat perferendis odio in nobis veritatis reprehenderit consequuntur eius modi asperiores
+        blanditiis vero.</p>
+</div>
+<script type="text/javascript">
+    function mostrarPremio() {
+        document.getElementById('mensaje').style.display = 'block';
+
+    }
+
+    function ocultarPremio() {
+        document.getElementById('mensaje').style.display = 'none';
+
+    }
+
+</script>
+
+</html>
