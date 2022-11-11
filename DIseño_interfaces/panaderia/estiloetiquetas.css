@@ -1,0 +1,162 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+#btninicio {
+    color: white;
+    font-size: 2rem;
+    transition-property: all;
+    transition-duration: 90ms;
+    text-decoration: none;
+}
+
+#btninicio:hover{
+    font-size: 3rem;
+}
+
+#btnproductos{
+    color: white;
+    font-size: 2rem;
+    transition-property: all;
+    transition-duration: 90ms;
+    text-decoration: none;
+}
+#btnproductos:hover{
+    font-size: 3rem;
+}
+
+#btnpedidos {
+    color: white;
+    font-size: 2rem;
+    transition-property: all;
+    transition-duration: 90ms;
+    text-decoration: none;
+}
+#btnpedidos:hover{
+    font-size: 3rem;
+}
+
+
+nav{
+
+    
+    
+    
+    background-color:#422512;
+    font-family:Arial, Helvetica, sans-serif ;
+    font-size: 2rem; 
+    padding: 1rem;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-around;
+    column-gap: 2px;
+
+}
+.bgimg{
+    height: 60px;
+    width: 50px;
+    text-align: left;
+    margin-right: 1rem;
+
+}
+.container{
+    width: 100%;
+    max-width: 1200px;
+    height: 430px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto;
+    
+}
+
+.lista-compra {
+    height: 10vh;
+    width: 15vw;
+    background-color: white;
+    display: none;
+    position: fixed;
+    height: 40rem;
+    top: 5rem;
+    bottom: 5rem;
+    right: 1rem;
+    width: 400px;
+    border: 3px solid black;
+    
+  }
+  .lista-compra img{
+    width: 90px;
+    height: 90px;
+    border-radius: 8px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    margin: 20px;
+    text-align: center;
+
+  }
+  .lista-compra h1,p{
+    font-size: 1rem;
+
+
+  }
+  .pan_carrito{
+    background-color: #e5aa4be7;
+    
+  }
+  .pan_carrito2{
+    background-color: #e5aa4be7;
+    
+  }
+  .comprar{
+    
+    text-align: center;
+    font-size: 3rem;
+    margin-top: 1rem;
+  }
+  
+
+
+  
+  .carrito:focus + .lista-compra {
+    display: block;
+  }
+.container .card{
+    width: 330px;
+    height: 330px;
+    border-radius: 8px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    margin: 20px;
+    text-align: center;
+    transition: all 0.30s;
+}
+
+.container .card:hover{
+    transform: translateY(-15px);
+    box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+}
+
+.container .card img{
+    width: 330px;
+    height: 220px;
+}
+
+
+.container .card h4{
+    font-weight: 600;
+    font-family: sans-serif
+}
+
+.container .card p{
+    padding: 0 1rem;
+    font-family: sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.container .card a {
+    font-weight: 500;
+    text-decoration: none;
+    color: black;
+}

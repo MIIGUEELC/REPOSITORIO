@@ -1,0 +1,61 @@
+// @use "sass:math"
+
+// .div1
+//     background-color: red
+//     width: 10rem
+//     height: math.div(5rem,2)
+    
+// @mixin font-products($color:red, $style:normal)
+//     font-family: sans-serif
+//     color: $color
+//     font-style: $style
+//     font-size: 1rem
+
+// .div1 
+//     @include font-products(green,italic)
+// .div2 
+//     @include font-products(blue,bold)
+// .div3
+//     @include font-products()
+
+//herencia
+// %mensaje
+//     height: 10rem
+//     width: 20rem
+//     border:  2 px solid violet
+
+// .div1 
+//     @extend %mensaje
+//     background-color: red
+// .div2 
+//     @extend %mensaje
+//     background-color: yellow
+// .div3 
+//     @extend %mensaje
+//     background-color: green
+
+
+ @mixin productos($background:linear-gradient(top, #c9de96 0%,#8ab66b 44%, #398235 100%))
+    background: $background
+
+.cssgradients
+     .foo 
+        @include productos()
+       
+
+.no-cssgradients
+     .foo
+        @include productos(#c9de96)
+
+  
+
+
+
+
+  
+
+
+
+
+
+

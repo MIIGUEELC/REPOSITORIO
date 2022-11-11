@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estiloetiquetas.css">
+
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <img class="bgimg" src="imagenes/pedrin.jpd.jpg" alt="">
+
+            <a id="btninicio" href="panaderia.html">Inicio</a>
+            <a id="btnproductos" href="">Productos</a>
+            <a id="btnpedidos" href="">Pedidos</a>
+            <button class="carrito" onclick="abrir_carrito()">Carrito</button>
+            <div class="lista-compra">
+
+                <div class="pan_carrito">
+                    <img src="imagenes/pan.jpg">
+                    <h4>Pan baguette</h4>
+                    <p>cantidad:1  +  -</p>
+                </div>
+                <div class="pan_carrito1">
+                    <img src="imagenes/pan1.jpg">
+                    <h4>Pan de pueblo </h4>
+                    <p>cantidad:2  +  -</p>
+
+                </div>
+                <div class="pan_carrito2">
+                    <img src="imagenes/torrijas.jpg">
+                    <h4>Torrijas</h4>
+                    <p>cantidad:1 +  -</p>
+
+
+                </div>
+                <div>
+                    <a id="btnpcomprar" href="carritocompra.html">Comprar</a>
+                </div>
+                
+
+
+
+
+            </div>
+
+        </nav>
+        <script>
+            const abrir_carrito = () => {
+                const panel = document.querySelectorAll('.card')[1].style;
+                panel.display = panel.display === 'none' ? 'block' : 'none';
+            };
+        </script>
+
+
+
+
+    </header>
+    <div class="container">
+
+        <div class="card">
+            <img src="imagenes/pan.jpg">
+            <h4>Pan baguette</h4>
+            <p>Estupendo pan para bocadillos</p>
+            <a href="#">Comprar...0.80 €</a>
+        </div>
+
+        <div class="card">
+            <img src="imagenes/pan1.jpg">
+            <h4>Pan de pueblo</h4>
+            <p>El mejor pan que habras probado en tu vida</p>
+            <a href="#">Comprar...1.00 €</a>
+        </div>
+
+        <div class="card">
+            <img src="imagenes/chapata.jpg">
+            <h4>Pan chapata</h4>
+            <p>Para los amantes de la chapata</p>
+            <a href="#">Comprar...0.90 €</a>
+        </div>
+        <div class="card">
+            <img src="imagenes/torrijas.jpg">
+            <h4>Torrijas</h4>
+            <p>Mas dulces que el beso de una madre</p>
+            <a href="#">Comprar...2.00 €</a>
+        </div>
+        <div class="card">
+            <img src="imagenes/dulces.jpg">
+            <h4>Bollos y dulces</h4>
+            <p>No apto para diabeticos</p>
+            <a href="#">Comprar....4.00€/kg</a>
+        </div>
+        <div class="card">
+            <img src="imagenes/panbimbo.jpg">
+            <h4>Pan bimbo</h4>
+            <p>Este nunca se te quedará pegado en el paladar...</p>
+            <a href="#">Comprar...2.25€</a>
+        </div>
+        <div class="card">
+            <img src="imagenes/tarta.jpg">
+            <h4>Tartas</h4>
+            <p>Estupendas para cumpleaños</p>
+            <a href="#">Comprar...12€</a>
+        </div>
+        <div class="card">
+            <img src="imagenes/harina.jpg">
+            <h4>Harina</h4>
+            <p>Harina de calidad para el repostero que hay en ti...</p>
+            <a href="#">Comprar...1.50€/kg</a>
+        </div>
+        <div class="card">
+            <img src="imagenes/harinagluten.jpg">
+            <h4>Harina sin gluten</h4>
+            <p>Para los celiacos de mierda</p>
+            <a href="#">Comprar...2.75€/kg</a>
+        </div>
+
+    </div>
+
+
+</body>
+
+</html>

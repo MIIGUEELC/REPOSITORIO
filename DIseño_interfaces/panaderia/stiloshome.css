@@ -1,24 +1,32 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
 
-nav{
+nav {
 
-    
-    
-    
-    background-color: #f0af47e7;
-    font-family:Arial, Helvetica, sans-serif ;
-    font-size: 2rem; 
+
+
+
+    background-color: #422512;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2rem;
     padding: 1rem;
     display: flex;
     flex-direction: row;
     align-items: flex-end;
     justify-content: space-around;
-    column-gap: 2px;
+    column-gap: 2rem;
 
 }
+
+.botones {
+    display: flex;
+
+    column-gap: 4rem;
+}
+
+
 #btninicio {
     color: white;
     font-size: 2rem;
@@ -27,18 +35,19 @@ nav{
     text-decoration: none;
 }
 
-#btninicio:hover{
+#btninicio:hover {
     font-size: 3rem;
 }
 
-#btnproductos{
+#btnproductos {
     color: white;
     font-size: 2rem;
     transition-property: all;
     transition-duration: 90ms;
     text-decoration: none;
 }
-#btnproductos:hover{
+
+#btnproductos:hover {
     font-size: 3rem;
 }
 
@@ -49,11 +58,12 @@ nav{
     transition-duration: 90ms;
     text-decoration: none;
 }
-#btnpedidos:hover{
+
+#btnpedidos:hover {
     font-size: 3rem;
 }
 
-.bgimg{
+.bgimg {
     height: 60px;
     width: 50px;
     text-align: left;
@@ -62,57 +72,160 @@ nav{
 }
 
 
-.mosaicos{
+.mosaicos {
     margin-left: 1rem;
     text-align: center;
     height: 200px;
     width: 20%;
     text-align: center;
-    background-color:white;
+    background-color: white;
     border-radius: 1rem;
     opacity: 0.85;
-    opacity: 0.7;
-    
-    
-    
+
+
+
+
 
 }
-.texto{
+.lista-compra {
+    height: 10vh;
+    width: 15vw;
+    background-color: white;
+    display: none;
+    position: fixed;
+    height: 40rem;
+    top: 5rem;
+    bottom: 5rem;
+    right: 1rem;
+    width: 400px;
+    border: 3px solid black;
     
+  }
+  .carrito:focus + .lista-compra {
+    display: block;
+  }
+.texto {
+
     text-align: center;
-    height: 200px;
-    width: 20%;
+    height: 100px;
+    width: 50%;
     text-align: center;
     color: #462E0C;
-    
-    
+    border-style: solid;
+    border-width: 1rem;
     background-color: white;
     opacity: 0.68;
-   
-    
-    
+
 }
 
-
-.bloque1{
+.bloque1 {
     font-size: 20px;
     font-family: Arial, Helvetica, sans-serif;
     display: flex;
     color: azure;
     flex-direction: row;
-   justify-content: space-around;
-   background-image: url('../panaderia/imagenes/pan.jpg');
-   background-size: cover;  
-   text-align: center;
-   padding-top: 1rem;
-   padding-bottom: 15rem;
-  
+    justify-content: space-around;
+    background-image: url('../panaderia/imagenes/pan.jpg');
+    background-size: cover;
+    text-align: center;
+    padding-top: 1rem;
+    padding-bottom: 15rem;
+
 }
 
-.bloque2{
-    background-color:#f0af47e7;
+.bloque2 {
+    background-color: #f0af47e7;
     display: flex;
     flex-direction: row;
-   justify-content: space-around;
+    justify-content: space-around;
+}
 
+.container1 {
+    width: 100%;
+    max-width: 1200px;
+    height: 430px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto;
+    margin-bottom: 1rem;
+    
+}
+
+.container1 .card {
+    width: 330px;
+    height: 330px;
+    border-radius: 8px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    margin: 20px;
+    text-align: center;
+    transition: all 0.25s;
+    background-color: #f0af47e7;
+    margin-top: 2rem;
+}
+
+.container1 .card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+}
+
+.container1 .card img {
+    width: 330px;
+    height: 220px;
+}
+
+
+.container1 .card h4 {
+    font-weight: 600;
+}
+
+.container1 .card p {
+    padding: 0 1rem;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.container1 .card a {
+    font-weight: 500;
+    text-decoration: none;
+    color: blue;
+}
+
+.pie-pagina {
+    width: 100%;
+    background-color: #0a141d;
+}
+
+.grid-container2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    font-family: 'Mulish';
+    padding-top: 50px;
+    padding-bottom: 30px;
+    background-color: rgb(7, 27, 44);
+}
+
+.grid-item2 {
+    font-family: 'Mulish';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 22px;
+    line-height: 33px;
+    text-align: center;
+
+    color: white;
+    -webkit-animation: scale-in-ver-top 0.1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation: scale-in-ver-top 0.25s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+.grid-item3 {
+    font-family: 'Kurale';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 25px;
+    line-height: 33px;
+    text-align: center;
+
+    color: white;
 }
