@@ -1,0 +1,144 @@
+
+body
+    margin: 0
+    padding: 0
+
+.menu
+    font-size: 2rem
+
+.botones
+    display: flex
+    column-gap: 2rem
+    align-items: center
+    justify-content: left
+    flex-grow: 1 //sin rem
+
+    .btn
+        font-family: Arial, Helvetica, sans-serif
+        color: black
+        margin-top: 1rem
+        text-decoration: none
+.containernav
+    display: flex
+    flex-direction: row
+
+.container-tarjetas
+    padding-left: 2rem
+    width: 90vw
+    height: 40vh
+    overflow: auto
+    display: flex
+    align-items: center
+    background-color: lightgrey
+    flex-direction: row
+    column-gap: 1rem
+
+    .tarjeta
+        width: 15rem
+        background-color: white
+
+        & img
+            height: 120px
+
+.container
+    div
+        margin: 0
+        background-color: ligth gray
+
+.imglogo
+    width: 5rem
+
+.acceso
+    display: flex
+    justify-content: left
+    align-items: center
+    width: 10rem
+    column-gap: 0
+
+    img
+        height: 2rem
+        width: 2rem
+
+.menu
+    display: none
+    size: 3rem
+.articulos
+    display: grid
+    grid-template-columns: 1fr 1fr 1fr
+    // align-items: center
+
+    div
+        background-color: lightgrey
+        margin: 1rem
+        column-gap: 1rem
+
+        img
+            max-width: 80%
+picture
+    p
+        font-family: Arial, Helvetica, sans-serif
+        font-size: 2rem
+        align-items: center
+        padding-left: 2rem
+
+.tabla_productos
+    img
+        height: 90px
+
+table
+
+    border-bottom: 1px solid black
+
+.tabla_productos
+    margin: 0 auto
+
+    width: 80%
+.tabla_productos
+    td
+        text-align: center
+        width: 100px
+        word-wrap: break-word
+        
+
+.filasamover
+    text-align: left
+
+h1
+    padding-left: 1rem
+.filasresponsivas
+    display: none
+
+@media screen  and (max-width: 900px)
+    .botones
+        display: none
+    .imagenlogin
+        display: none
+    .imagenmap
+        display: none
+    .imagencesta
+        display: none
+        display: flex
+        text-align: center
+        justify-content: center
+    .containernav
+        justify-content: space-between
+    .menu
+        display: block
+    .articulos
+        grid-template-columns: 1fr 1fr
+    .filasamover
+        display: none
+    .filasresponsivas
+        display: block
+        
+        text-align: center
+
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
+    
+        
+
+// @media screen  and (max-width: 600px)
+//      .img
+//         display: flex
+//         align-content: center
+//         justify-content: center
