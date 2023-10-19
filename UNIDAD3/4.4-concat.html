@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+
+    <script type="text/javascript">
+
+        let equiposA= new Array("Real madrid","barcelona","valencia");
+        let equiposB= new Array("bilbao","atleti","betis");
+        let liga = equiposA.concat(equiposB);
+        console.log(liga);
+        document.write(liga.join("<br>")); // aqui ya lo escribe en cada linea en el html
+        equiposA.reverse();//da la vuelta al array
+        document.write(equiposA);
+        liga.shift();
+        document.write(liga); // elimina el primer elemento del array
+        liga.pop();
+        document.write(liga);
+        let cima =liga.pop();
+        document.write(liga);
+       </script>
+
+
+    
+</body>
+</html>

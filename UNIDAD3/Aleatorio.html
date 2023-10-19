@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1>NUMERO ALEATORIO</h1>
+    <h1>Premios de Lotería de Navidad</h1>
+    <ul id="premiosList" class="list-group">
+    <script type="text/javascript">
+
+       let maximo = prompt("Introduce el maximo");
+
+        const numAleatorio= (maximo) => {
+           
+            const resultado = Math.floor(Math.random() * maximo);
+            return resultado;
+        };
+        const resultado = numAleatorio(maximo);
+        document.write("el numero aleatorio es: "+resultado);
+
+
+        const premios = [];
+
+// Generar 10 premios y guardarlos en el array
+for (let i = 0; i < 10; i++) {
+    const premio = numAleatorio(maximo); // Rango maximo
+    premios.push(premio);
+}
+
+// Recorre el array de premios y muestra cada uno en un elemento alert de Bootstrap
+premios.forEach((premio, index) => {
+    const premioHtml = `
+        <li class="list-group-item">
+            <div class="alert alert-success" role="alert">
+                Premio ${index + 1}: $${premio}
+            </div>
+        </li>
+    `;
+    document.getElementById("premiosList").innerHTML += premioHtml;
+});
+
+
+    </script>
+    
+</body>
+</html>

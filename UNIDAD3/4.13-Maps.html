@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script type="text/javascript">
+
+        // los maps tienen clave valor y la clave debe ser unica 
+
+        const frutas = new Map([
+            ["Manzanas",500],
+            ["bananas",300],
+            ["naranjas",200]
+        
+        ]);
+        
+        document.write(frutas.get("Manzanas"));
+        document.write(frutas.get("bananas"));
+
+        // otra forma
+        const frutas2 = new Map();
+        frutas2.set("Manzanas",500);
+        frutas2.set("bananas",300);
+        frutas2.set("naranjas",200);
+        document.write(frutas2.get("Manzanas")); 
+
+
+        let tamaño=frutas2.size; // devuelve el tamaño del mapa 
+
+        frutas2.delete("bananas") // aqui borra bananas
+        console.log(frutas2.has("Manzanas")); // devolvera true o falso 
+
+        let text="";
+        frutas.forEach(function(value,key){   // es un callback  , esto es un iterador 
+            text+=key+"="+value+"<br>"
+
+            text="";
+            for(const x of frutas.keys()){  // es igual aqui recorremos claves
+                text+= x +"<br>";
+            }
+            text="";
+            for(const x of frutas.values()){  // aqui recorremos texto
+                text+= x +"<br>";
+            }
+
+
+           
+            
+            
+
+        });
+        document.write(text);
+
+
+
+        // creamos los objetos
+
+        const manzanas = {name:"manzanas"};
+        const platanos = {name:"platanos"};
+        const naranjas = {name:"naranjas"};
+
+        const frutas3 = new Map();
+        frutas3.set(manzanas,500);
+        frutas3.set(platanos,300);
+        frutas3.set(naranjas,200);
+
+
+        document.write(frutas3.get(manzanas));  // se pone el nombre del objeto no de la clave
+
+        frutas3.clear; // con esto borra todo
+
+
+
+
+
+        
+ 
+ 
+     </script>
+    
+</body>
+</html>
