@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style type="text/css">
+    *{
+      margin: 0px;
+      padding: 0px;
+      text-decoration: none;
+      list-style-type: none;
+      font-family: sans-serif;
+    }
+
+    #menu li a{
+      display: block;
+      color: black;
+      padding: .5rem;
+
+    }
+    #menu>ul>li>a{
+      background: yellow;
+    }
+
+    #menu li ul{
+      background: pink;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height .5s;
+
+    }
+
+    #menu li.mostrar ul{
+      max-height: 500px;
+    }
+  </style>
+</head>
+<body>
+  <nav id="menu">
+    <ul>
+      <li>
+        <a href="#"> Item 1</a>
+        <ul>
+          <li><a href="#">Opcion 1</a></li>
+          <li><a href="#">Opcion 2</a></li>
+          <li class="separador"></li>
+          <li><a href="#">Opcion 3</a></li>
+          <li><a href="#">Opcion 4</a></li>
+          <li><a href="#">Opcion 5</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#"> Item 2</a>
+        <ul>
+          <li><a href="#">Opcion 1</a></li>
+          <li class="separador"></li>
+          <li><a href="#">Opcion 2</a></li>
+          <li><a href="#">Opcion 3</a></li>
+          <li><a href="#">Opcion 4</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#"> Item 3</a>
+        <ul>
+          <li><a href="#">Opcion 1</a></li>
+          <li class="separador"></li>
+          <li><a href="#">Opcion 2</a></li>
+          <li><a href="#">Opcion 3</a></li>
+          <li><a href="#">Opcion 4</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+
+
+
+  <script>
+    const encabezados = document.querySelectorAll("#menu>ul>li>a");
+      console.log(encabezados);
+
+
+    
+    encabezados.forEach(element => {
+      element.addEventListener("click",despliga);
+    
+   
+      function despliga(e){
+        e.preventDefault();
+        const nodo=e.target;
+        var lipadre=nodo.parentNode;
+
+        if(lipadre.classList.contains("mostrar")){
+          lipadre.classList.remove("mostrar");
+        } else{
+          mostrados=lipadre.parentNode.getElementsByClassName("mostrar");
+          for(var i=0;i<mostrados.length;i++){
+            mostrados[i].classList.remove("mostrar");
+          }
+          lipadre.classList.add("mostrar")
+        }
+      }
+    });
+  
+
+  </script>
+</body>
+</html>

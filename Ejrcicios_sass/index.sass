@@ -1,0 +1,39 @@
+@use 'colores'
+
+    
+body
+    margin: 0
+
+header
+    height: colores.$size-article
+    background-color: colores.$main-color
+    display: flex
+    justify-content: center
+
+    h1  
+
+     color: white
+     font-family: sans-serif
+
+section
+
+    align-items: center
+    display: flex
+    flex-direction: column
+    margin-top: 1rem
+    row-gap: 2
+    
+    
+
+    article
+        background-color: colors.$nav-color
+        height: colores.$size-article
+        margin-top: 1rem
+        width: 60%
+
+        &:hover //para poner un hover al article en el que esta
+            background-color: red
+            
+
+    
+    

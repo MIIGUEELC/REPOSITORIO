@@ -1,0 +1,67 @@
+body{
+    margin: 0;
+}
+h1{
+    color:  orange;
+    
+    background-color: #11648d;
+    font-family:Arial, Helvetica, sans-serif ;
+    font-size: 2rem; 
+    padding: 2rem;
+    text-align: center;
+    margin: 0;
+    
+   
+
+}
+table{
+    border: 1px solid black;
+    border-collapse:collapse ;
+    text-align: center;
+    width: 100%;
+
+}
+td,th{
+    border: 1px solid black;
+    width: 550px;
+    
+}
+.imagen_portada{
+    height: 300px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+.videos_golf{
+    height: 300px;
+    width: 600px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+.secciones{
+    background-color: rgb(36, 141, 162);
+    padding: 1rem;
+    margin: 0;
+}
+.formulario{
+    width: 85%;
+    background-color: rgb(133, 198, 235);
+    margin-top: 0;
+    padding-top: 1rem;
+    
+}
+.testimonios{
+    width: 15%;
+   
+    text-align: right;
+    background-color: yellow;
+}
+.formulario_bot{
+    text-align: center;
+}
+.content{
+    display: flex;
+    flex-direction: row;
+}
+footer{
+    background-color: black;
+}
