@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+
+        function imprimirdatos(){ // esta funcion a meteremos en el constructor
+            document.write("marca:"+this.marca);
+            document.write("<br>modelo:"+this.modelo);
+            document.write("<br>year"+this.anno);
+        }
+
+
+        function coche(marca_in,modelo_in,anno_in){  // esto es el constructor
+            this.marca=marca_in;
+            this.modelo=modelo_in;
+            this.anno=anno_in;
+
+            this.imprimedatos= imprimirdatos;
+        }
+
+
+
+        let coches=new Array(4);
+        coches[0]=new coche("ferrari","scaglietti","2010");
+        coches[1]=new coche("bmw","z4","1999");
+        coches[2]=new coche("seat","toledo","1999");
+        coches[3]=new coche("fiat","500","1995");
+
+
+        for(i=0; i<coches.length;i++){
+            document.write("<b>Marca</b>:"+coches[i].marca+"-<b>Modelo</b>"+coches[i].modelo);
+        }
+
+        let nuevo_coche=new coche("seat","ibiza","1998");
+        nuevo_coche.imprimedatos();
+
+        const lenguajes = new Array('CSS','JAVASCRIPT','HTML');
+        const frameworks = new Array('reac','vue','angular');
+
+        const tecnologias = lenguajes.concat(frameworks);
+        let miArray1=lenguajes.join(",");
+        console.log(miArray1);
+
+
+
+    </script>
+
+
+
+
+
+    
+</body>
+</html>

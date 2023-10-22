@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tabla de Alumnos</title>
+</head>
+<body>
+
+<script>
+class Persona {
+    constructor(dni, nombre, apellidos, poblacion, edad, estudios) {
+        this.dni = dni;
+        this.nombre = nombre;
+        this.apellidos = apellidos;
+        this.poblacion = poblacion;
+        this.edad = edad;
+        this.estudios = estudios;
+    }
+}
+
+// Crear un mapa donde la clave es el DNI y el valor es un objeto Persona
+const mapaPersonas = {
+    "12345678A": new Persona("12345678A", "Juan", "Pérez", "Madrid", 30, "Bachillerato"),
+    "87654321B": new Persona("87654321B", "María", "González", "Barcelona", 25, "Universidad"),
+    "54321678C": new Persona("54321678C", "Luis", "Fernández", "Valencia", 22, "Ciclo Formativo")
+};
+
+// Ordenar el mapa por clave (DNI)
+const mapaOrdenadoPorDNI = Object.fromEntries(Object.entries(mapaPersonas).sort());
+
+// Ordenar el mapa por edad
+const mapaOrdenadoPorEdad = Object.fromEntries(Object.entries(mapaPersonas).sort((a, b) => a[1].edad - b[1].edad));
+
+// Función para generar la tabla HTML
+function generarTabla(mapa) {
+    let tabla = "<table><tr><th>DNI</th><th>Nombre</th><th>Apellidos</th><th>Población</th><th>Edad</th><th>Estudios</th></tr>";
+    for (let dni in mapa) {
+        const persona = mapa[dni];
+        tabla += `<tr><td>${persona.dni}</td><td>${persona.nombre}</td><td>${persona.apellidos}</td><td>${persona.poblacion}</td><td>${persona.edad}</td><td>${persona.estudios}</td></tr>`;
+    }
+    tabla += "</table>";
+    return tabla;
+}
+
+// Agregar la tabla al cuerpo del documento
+document.body.innerHTML = generarTabla(mapaOrdenadoPorEdad);
+</script>
+
+</body>
+</html>
